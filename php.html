@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Programs</title>
+</head>
+
+<body>
+
+<h1>PHP Programs</h1>
+
+<!-- PROGRAM 1 -->
+
+<h3>1. Session Program</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Session Program&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;?php
+
+session_start();
+
+$_SESSION["user"]="Ayush";
+
+echo "User Name : ".$_SESSION["user"];
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="php1.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 2 -->
+
+<h3>2. Cookie Program</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Cookie Program&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;?php
+
+setcookie("name","Ayush",time()+3600);
+
+echo "Cookie Created";
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="php2.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 3 -->
+
+<h3>3. Page View Counter</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Page Counter&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;?php
+
+session_start();
+
+if(isset($_SESSION['count']))
+{
+    $_SESSION['count']++;
+}
+
+else
+{
+    $_SESSION['count']=1;
+}
+
+echo "Page Views : ".$_SESSION['count'];
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="php3.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 4 -->
+
+<h3>4. File Upload Program</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;File Upload&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form method="post" enctype="multipart/form-data"&gt;
+
+Select File :
+
+&lt;input type="file" name="file"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;input type="submit" value="Upload"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if(isset($_FILES['file']))
+{
+    echo "File Uploaded Successfully";
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="php4.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 5 -->
+
+<h3>5. Student Registration Form</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Student Form&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form method="post"&gt;
+
+Enter Name :
+
+&lt;input type="text" name="name"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+Enter Course :
+
+&lt;input type="text" name="course"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;input type="submit" value="Submit"&gt;
+
+&lt;/form&gt;
+
+&lt;?php
+
+if($_POST)
+{
+    echo "Student Registered Successfully";
+}
+
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="php5.jpeg">Output</a>
+
+</body>
+</html>

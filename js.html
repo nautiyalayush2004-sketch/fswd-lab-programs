@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Programs</title>
+</head>
+
+<body>
+
+<h1>JavaScript Programs</h1>
+
+<!-- PROGRAM 1 -->
+
+<h3>1. Credit Card Validation</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Credit Card Validation&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;script&gt;
+
+function validate(){
+
+    var card=document.getElementById("card").value;
+
+    if(card.length==16)
+    {
+        alert("Valid Card");
+    }
+
+    else
+    {
+        alert("Invalid Card");
+    }
+}
+
+&lt;/script&gt;
+
+Enter Card Number :
+
+&lt;input type="text" id="card"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;button onclick="validate()"&gt;
+Validate
+&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="js1.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 2 -->
+
+<h3>2. Form Validation</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Form Validation&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;script&gt;
+
+function check(){
+
+    var name=document.getElementById("name").value;
+
+    if(name=="")
+    {
+        alert("Enter Name");
+    }
+
+    else
+    {
+        alert("Form Submitted");
+    }
+}
+
+&lt;/script&gt;
+
+Enter Name :
+
+&lt;input type="text" id="name"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;button onclick="check()"&gt;
+Submit
+&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="js2.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 3 -->
+
+<h3>3. Simple Calculator</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Calculator&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;script&gt;
+
+function add(){
+
+    var a=10;
+    var b=20;
+
+    alert(a+b);
+}
+
+&lt;/script&gt;
+
+&lt;button onclick="add()"&gt;
+Add Numbers
+&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="js3.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 4 -->
+
+<h3>4. Running Clock</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Running Clock&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1 id="clock"&gt;&lt;/h1&gt;
+
+&lt;script&gt;
+
+setInterval(function(){
+
+    document.getElementById("clock").innerHTML=
+    new Date().toLocaleTimeString();
+
+},1000);
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="js4.jpeg">Output</a>
+
+<hr>
+
+<!-- PROGRAM 5 -->
+
+<h3>5. Popup Message</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Popup Message&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;script&gt;
+
+function message(){
+
+    alert("Welcome to JavaScript");
+}
+
+&lt;/script&gt;
+
+&lt;button onclick="message()"&gt;
+Click Here
+&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<a href="js5.jpeg">Output</a>
+
+</body>
+</html>
